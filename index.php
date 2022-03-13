@@ -10,6 +10,7 @@
 	}
 	$winArray = array(array(1,2,3),array(4,5,6),array(7,8,9),array(1,4,7),array(2,5,8),array(3,6,9),array(1,5,9),array(3,5,7));
 ?>
+<link rel="stylesheet" href="style.css">
 <script type="text/javascript">
 	function disable()
 	{
@@ -19,7 +20,7 @@
 		}
 	}
 </script>
-<form method="GET" action="ticTacToeSession.php">
+<form method="GET" action="index.php">
 <center>
 
 <h3>
@@ -161,53 +162,3 @@
 		}
 	}
 ?>
-
-<style type="text/css">
-	.button
-	{
-		width: 100px;
-		height: 100px;
-		background-color: #4CAF50;
-  		color: white;	
-  		text-align: center;
-  		display: inline-block;
-  		font-size: 50px;
-
-	}
-   .text
-   {
-   		background-color: cyan;
-   		font-size: 50px;
-   		align-content: center;
-   }
-   .example_a
-   {
-		color: #fff !important;
-		text-transform: uppercase;
-		text-decoration: none;
-		background: #ed3330;
-		padding: 20px;
-		border-radius: 5px;
-		display: inline-block;
-		border: none;
-		transition: all 0.4s ease 0s;
-		font-family: "Trebuchet MS", Verdana, sans-serif;
-		font-weight: bolder;
-	}
-	.example_a:hover 
-	{
-		background: #434343;
-		letter-spacing: 1px;
-		-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-		-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-		box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-		transition: all 0.4s ease 0s;
-	}
-	h3 {
-  	font-family: "Trebuchet MS", Verdana, sans-serif;
-	}
-	span{
-	font-family: "Trebuchet MS", Verdana, sans-serif;
-	font-size: 25px;
-	}
-</style>
