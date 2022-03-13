@@ -52,20 +52,18 @@ $winArray = array(array(1, 2, 3), array(4, 5, 6), array(7, 8, 9), array(1, 4, 7)
 					break;
 				}
 			}
-			if ($_SESSION['win'] == 0) {
+			if ($_SESSION['turn'] > 9 and $_SESSION['win'] == 0) {
+				echo "<span> It's a Draw </span><br>";
+			}
+			elseif ($_SESSION['win'] == 0) {
 				if ($_SESSION['turn'] % 2 == 0) {
 					echo "<span> Player 2's Turn </span><br>";
 				} else {
 					echo "<span> Player 1's Turn </span><br>";
 				}
 			}
-		} else {
-			if ($_SESSION['turn'] > 9 and $_SESSION['win'] == 0) {
-				echo "<span> It's Draw </span><br>";
-			}
 		}
 		?>
-		<br>
 		<br>
 		<input type="submit" name="newGame" value="NEW GAME" class="example_a">
 	</center>
@@ -119,7 +117,7 @@ function updateButton($name)
 function checkWin($a, $b, $c)
 {
 	if (isset($_SESSION[$a]) and isset($_SESSION[$b]) and isset($_SESSION[$c])) {
-		if ($_SESSION[$a] == $_SESSION[$b] and $_SESSION[$a] == $_SESSION[$c] and $_SESSION['win'] == 0) {
+		if ($_SESSION[$a] == $_SESSION[$b] and $_SESSION[$a] == $_SESSION[$c] and $_SESSION[$b] == $_SESSION[$c]) {
 			if ($_SESSION['turn'] % 2 == 0) {
 				echo "<br><br><span class='text'>Player 1 Wins<br></span>";
 				$_SESSION['win'] = 1;
